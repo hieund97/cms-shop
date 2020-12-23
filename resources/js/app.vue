@@ -1,13 +1,16 @@
 <template>
     <div class="wrapper">
+        <Header></Header>
+        <Aside></Aside>
         <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <app-breadcrumd :list="list"></app-breadcrumd>
+        <Breadcrumb></Breadcrumb>
             <section class="content">
                 <router-view></router-view>
             </section>
         <!-- /.content-header -->
-    </div>
+        </div>
+        <Footer></Footer>
     </div>
 </template>
 

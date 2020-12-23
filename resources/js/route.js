@@ -1,6 +1,6 @@
-import App from './app.vue';
+import Dashboard from "./components/dashboard/dashboard";
 
 
 export const routes = [
-    { path: '/', component: App },
+    { path: '/', component: Dashboard },
 ];
