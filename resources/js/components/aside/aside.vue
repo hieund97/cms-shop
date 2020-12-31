@@ -2,7 +2,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a :href="menuData.home_url" class="brand-link">
+        <a :href="home_url" class="brand-link">
             <img src="dist/img/VueShopLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                 style="opacity: .8">
             <span class="brand-text font-weight-light">VUE SHOP</span>
@@ -39,7 +39,7 @@
                     data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
-                    <li class="nav-item" v-for="(menu, k) in menuData" :key="k">
+                    <li class="nav-item" v-for="(menu, k) in listMenu" :key="k">
                         <a :href="menu.url" class="nav-link">
                             <i :class="`nav-icon ` + menu.icon"></i>
                             <p>
@@ -65,12 +65,30 @@
 </template>
 
 <script>
-import data from './../../data/menu.json'
 export default {
     name: "Aside",
     data() {
         return {
-            menuData: data.data
+            home_url: '',
+            listMenu: [],
+            errors: [],
+        }
+    },
+
+    created(){
+        this.getListMenu();
+    },
+
+    methods: {
+        getListMenu() {
+            axios.get('/api/get-list-menu')
+            .then(response => {
+                this.listMenu = response.data.data;
+                this.home_url = response.data.home_url;
+            })
+            .catch(error => {
+                
+            })
         }
     }
 }

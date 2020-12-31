@@ -7,4 +7,9 @@ export const routes = [
         component: Dashboard,
         name: 'Dashboard'
     },
+    {
+        path: '/admin',
+        component: Dashboard,
+        name: 'Dashboard'
+    }
 ];
