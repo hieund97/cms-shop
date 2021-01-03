@@ -1,28 +1,28 @@
 <?php
 return [
-    'home_url' => '/admin',
+    'home_url' => env('APP_URL', '/'),
 
     'data' => [
         // Menu Dashboard
         'dashboard' => [
             'name'      => 'Dashboard',
             'icon'      => 'fas fa-fw fa-tachometer-alt',
-            'url'       => '/admin',
+            'url'       => '/',
         ],
     
         // Menu Product
         'product' => [
             'name'      => 'Product',
             'icon'      => 'fas fa-shopping-bag',
-            'url'       => '/admin/product',
+            'url'       => '/product',
             'child'     => [
                 'list_product' => [
                     'name'      => 'List Product',
-                    'url'       => '/admin/product',
+                    'url'       => '/product',
                 ],
                 'create_product' => [
                     'name'      => 'Create Product',
-                    'url'       => '/admin/product/create',
+                    'url'       => '/product/create',
                 ],
             ],
         ],
@@ -31,40 +31,41 @@ return [
         'category' => [
             'name'      => 'Category',
             'icon'      => 'fas fa-layer-group',
-            'url'       => '/admin/category',
+            'url'       => '/category',
             'child'     => [
                 'list_category' => [
                     'name'      => 'List Category',
-                    'url'       => '/admin/category',
+                    'url'       => '/category',
                 ],
                 'create_category' => [
                     'name'      => 'Create Category',
-                    'url'       => '/admin/category/create',
+                    'url'       => '/category/create',
                 ],
             ],
         ],
 
+        // Menu user
         "user" => [
             "name" => "Users",
             "icon" => "fas fa-user-circle",
-            "url"  => "/admin/user",
+            "url"  => "/user",
             "child"=> [
                 "list_user" => [
                     "name"      => "List user",
-                    "url"       => "/admin/user"
+                    "url"       => "/user"
                 ],
                 "create_user" => [
                     "name" => "Create user",
-                    "url"  => "/admin/user/create"
+                    "url"  => "/user/create"
                 ]
             ]
         ],
 
-         // Menu Category
+         // Menu Setting
          'setting' => [
             'name'      => 'Setting',
             'icon'      => 'fas fa-cog',
-            'url'       => '/admin/setting',
+            'url'       => '/setting',
         ],
     ],
 ];
