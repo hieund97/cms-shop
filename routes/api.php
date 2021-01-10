@@ -18,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Menu API
 Route::get('/get-list-menu', 'MenuController@getMenu')->name('get_menu');
+
+// User API
+Route::get('/get-list-user', 'UserController@getListUser')->name('get_list_user');

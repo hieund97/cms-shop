@@ -1,5 +1,7 @@
-const Dashboard = () => import('./components/dashboard/dashboard');
-const ListUser = () => import('./components/user/listUser');
+import  ListUser  from "./components/user/listUser";
+import  CreateUser  from "./components/user/createUser";
+import  Dashboard  from "./components/dashboard/dashboard";
+import  Setting  from "./components/setting/setting";
 
 
 export const routes = [
@@ -12,5 +14,15 @@ export const routes = [
         path: '/user',
         component: ListUser,
         name: 'ListUser'
+    },
+    {
+        path: '/setting',
+        component: Setting,
+        name: 'Setting'
+    },
+    {
+        path: '/user/create',
+        component: CreateUser,
+        name: 'CreateUser'
     }
 ];

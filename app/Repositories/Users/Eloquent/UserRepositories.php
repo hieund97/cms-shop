@@ -8,15 +8,6 @@ use Illuminate\Support\Carbon;
 
 class UserRepositories extends RepositoriesAbstract implements UserInterface
 {
-    // /**
-    //  * get model
-    //  * @return string
-    //  */
-    // public function getModel()
-    // {
-    //     return \App\Models\Users::class;
-    // }
-
     /**
      * Get All user
      *

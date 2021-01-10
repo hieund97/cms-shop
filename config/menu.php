@@ -66,6 +66,16 @@ return [
             'name'      => 'Setting',
             'icon'      => 'fas fa-cog',
             'url'       => '/setting',
+            "child"=> [
+                "general" => [
+                    "name"      => "General",
+                    "url"       => "/setting/general"
+                ],
+                "permission" => [
+                    "name" => "Permission",
+                    "url"  => "/setting/permission"
+                ]
+            ]
         ],
     ],
 ];
