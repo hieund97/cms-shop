@@ -13,7 +13,7 @@ export const routes = [
     {
         path: '/user',
         component: ListUser,
-        name: 'ListUser'
+        name: 'List User'
     },
     {
         path: '/setting',
@@ -23,6 +23,6 @@ export const routes = [
     {
         path: '/user/create',
         component: CreateUser,
-        name: 'CreateUser'
+        name: 'Create User'
     }
 ];

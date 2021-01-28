@@ -11,7 +11,9 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import { routes }  from './route.js';
 import App from './app.vue';
+import ImageUploader from 'vue-image-upload-resize'
 
+Vue.use(ImageUploader);
 Vue.use(VueRouter)
 
 /**
